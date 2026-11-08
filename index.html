@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>غابة رغدان للحجر الطبيعي</title>
+<meta name="description" content="غابة رغدان للحجر الطبيعي بالمدينة المنورة: تصاميم وتوريد وتركيب وإشراف على الحجر الأردني الطبيعي لواجهات الفلل والعمارات والمباني التجارية.">
+<meta name="theme-color" content="#0d0c0a">
+<link rel="icon" type="image/png" href="img/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Reem+Kufi:wght@500;600;700&display=swap">
+<style>
+/* Concept: a stone yard at dusk. Black ground, brass gold taken from the logo ring, limestone-warm text.
+   A full-bleed facade opens the page, then one real project is told as a sequence (site, night, finished). */
+:root{
+  --ink:#0d0c0a;
+  --coal:#161410;
+  --coal-2:#1f1c15;
+  --stone:#ece5d6;
+  --stone-dim:#b9b09c;
+  --gold:#c9a24a;
+  --gold-hi:#e6c570;
+  --line:rgba(201,162,74,.3);
+  --f-display:"Reem Kufi","Noto Kufi Arabic","Segoe UI",Tahoma,sans-serif;
+  --f-body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--stone);font-family:var(--f-body);font-size:17px;line-height:1.8;direction:rtl}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;line-height:1.35;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 26px;border-radius:3px;font:600 16px/1.4 var(--f-body);text-decoration:none;border:1.5px solid var(--gold);cursor:pointer}
+.btn-gold{background:var(--gold);color:#17120a}
+.btn-gold:hover{background:var(--gold-hi)}
+.btn-line{background:rgba(13,12,10,.35);color:var(--gold-hi)}
+.btn-line:hover{background:rgba(201,162,74,.16)}
+
+/* hero: full-bleed photo, header sits on it */
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:640px;display:flex;flex-direction:column}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:-2;animation:drift 18s ease-out both}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to left,rgba(13,12,10,.94) 0%,rgba(13,12,10,.78) 38%,rgba(13,12,10,.2) 75%,rgba(13,12,10,.05) 100%),linear-gradient(to top,var(--ink) 0%,transparent 28%)}
+@keyframes drift{from{transform:scale(1.07)}to{transform:scale(1)}}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.brand img{width:54px;height:54px;flex:none}
+.brand b{font-family:var(--f-display);font-size:21px;font-weight:600;line-height:1.3}
+.brand small{display:block;color:var(--stone-dim);font-size:13px;line-height:1.3}
+.nav{display:flex;gap:26px;font-size:15px}
+.nav a{text-decoration:none;color:var(--stone)}
+.nav a:hover{color:var(--gold-hi)}
+@media(max-width:760px){.nav{display:none}}
+.hero-body{flex:1;display:flex;align-items:center;padding-block:56px 96px}
+.hero-body>div{max-width:620px}
+.eyebrow{display:inline-block;color:var(--gold-hi);font-size:15px;font-weight:500;border-block-end:1px solid var(--line);padding-block-end:6px;margin-block-end:20px}
+.hero h1{font-size:clamp(34px,5.6vw,64px);line-height:1.25}
+.hero h1 em{font-style:normal;color:var(--gold-hi)}
+.lead{margin-block:22px 32px;color:var(--stone);opacity:.88;max-width:32em;font-size:18px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+
+.facts{background:var(--coal);border-block:1px solid var(--line)}
+.facts .wrap{display:grid;grid-template-columns:repeat(3,auto);justify-content:space-between;gap:12px 32px;padding-block:22px}
+.facts p{font-size:15px;color:var(--stone-dim)}
+.facts strong{color:var(--gold-hi);font-weight:600;font-family:var(--f-display);font-size:19px;margin-inline-end:8px}
+@media(max-width:860px){.facts .wrap{grid-template-columns:1fr}}
+
+section{padding-block:84px}
+.sec-head{margin-block-end:40px;max-width:42em}
+.sec-head .eyebrow{margin-block-end:14px}
+.sec-head h2{font-size:clamp(26px,3.6vw,40px)}
+.sec-head p{margin-block-start:14px;color:var(--stone-dim)}
+
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.emblem{justify-self:center;width:min(320px,70%);aspect-ratio:1;border-radius:50%;box-shadow:0 0 0 10px var(--ink),0 0 0 11px var(--line),0 24px 60px rgba(0,0,0,.55)}
+.about p+p{margin-block-start:16px}
+.quote{margin:28px 0 0;padding-inline-start:20px;border-inline-start:3px solid var(--gold);font-size:18px}
+.quote cite{display:block;margin-block-start:8px;font-style:normal;font-size:14px;color:var(--stone-dim)}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:36px}}
+
+/* services + stones */
+.services{background:var(--coal);border-block:1px solid var(--line)}
+.svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+.svc li{padding-block:22px;border-block-end:1px solid var(--line)}
+.svc h3{font-size:22px;color:var(--gold-hi);margin-block-end:4px}
+.svc p{color:var(--stone-dim);font-size:16px}
+@media(max-width:760px){.svc{grid-template-columns:1fr}}
+.stone-sec{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.ledger{list-style:none;margin:0;padding:0;border-block-start:1px solid var(--gold)}
+.ledger li{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-block:18px;border-block-end:1px solid var(--line);font-family:var(--f-display);font-size:23px}
+.ledger li span{font-family:var(--f-body);font-size:14px;color:var(--stone-dim)}
+.stone-note{margin-block-start:20px;color:var(--stone-dim)}
+@media(max-width:860px){.stone-sec{grid-template-columns:1fr;gap:28px}}
+
+/* projects: named, one editorial row each */
+.projects{background:var(--coal);border-block:1px solid var(--line)}
+.projs{display:grid;gap:80px}
+.proj{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.proj.rev{grid-template-columns:1fr 1.4fr}
+.proj.rev .stage{order:2}
+.stage{min-width:0}
+.main{position:relative;display:block;width:100%;padding:0;border:0;background:var(--coal-2);cursor:zoom-in;aspect-ratio:3/2;overflow:hidden;border-radius:3px}
+.main img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.main::before,.main::after{content:"";position:absolute;width:46px;height:46px;border:2px solid var(--gold-hi);pointer-events:none}
+.main::before{inset-block-start:14px;inset-inline-start:14px;border-inline-end:0;border-block-end:0}
+.main::after{inset-block-end:14px;inset-inline-end:14px;border-inline-start:0;border-block-start:0}
+.thumbs{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(62px,1fr));gap:8px}
+.th{display:block;width:100%;aspect-ratio:3/2;padding:0;border:2px solid transparent;border-radius:3px;overflow:hidden;background:var(--coal-2);cursor:pointer;opacity:.6}
+.th[aria-pressed="true"]{border-color:var(--gold);opacity:1}
+.th:hover{opacity:1}
+.th img{width:100%;height:100%;object-fit:cover}
+.badge{display:inline-block;font-size:14px;color:var(--gold-hi);border:1px solid var(--gold);border-radius:999px;padding:3px 16px;margin-block-end:16px}
+.info h3{font-size:clamp(28px,3.6vw,42px);line-height:1.3}
+.info .sub{color:var(--stone-dim);margin-block-start:6px;font-size:18px}
+.spec{margin:24px 0 0;border-block-start:1px solid var(--gold)}
+.spec div{display:grid;grid-template-columns:6.5em 1fr;gap:12px;padding-block:12px;border-block-end:1px solid var(--line)}
+.spec dt{color:var(--stone-dim);font-size:15px}
+.spec dd{margin:0}
+@media(max-width:900px){.proj,.proj.rev{grid-template-columns:1fr;gap:24px}.proj.rev .stage{order:0}.projs{gap:64px}}
+
+/* more work: bento plates */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;grid-auto-flow:dense;gap:12px}
+.tile{position:relative;margin:0;overflow:hidden;border-radius:3px;background:var(--coal);cursor:zoom-in;padding:0;border:0;color:inherit;font:inherit;text-align:start}
+.tile.tall{grid-row:span 2}
+.tile.wide{grid-column:span 2}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.tile:hover img{transform:scale(1.04)}
+.tile span{position:absolute;inset:auto 0 0 0;padding:34px 14px 11px;font-size:15px;background:linear-gradient(transparent,rgba(8,7,5,.9));color:var(--stone)}
+.tile span::before{content:"";display:inline-block;width:18px;height:2px;background:var(--gold);vertical-align:middle;margin-inline-end:8px}
+@media(max-width:700px){.bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}}
+.lb{position:fixed;inset:0;z-index:60;background:rgba(6,5,4,.95);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:calc(16px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb[hidden]{display:none}
+.lb img{max-height:80vh;max-width:100%;object-fit:contain;border-radius:3px}
+.lb p{color:var(--stone-dim);font-size:15px}
+.lb button{position:absolute;inset-block-start:calc(14px + env(safe-area-inset-top,0px));inset-inline-start:max(14px,env(safe-area-inset-left,0px));font:600 15px var(--f-body);padding:8px 18px;border-radius:3px;border:1px solid var(--gold);background:var(--ink);color:var(--gold-hi);cursor:pointer}
+
+/* numbers */
+.nums{position:relative;isolation:isolate;overflow:hidden;border-block:1px solid var(--line);padding-block:76px}
+.nums>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.nums::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(13,12,10,.88)}
+.nums .sec-head{text-align:center;margin-inline:auto;margin-block-end:44px}
+.nums ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.nums li{text-align:center;padding:12px 16px;border-inline-start:1px solid var(--line)}
+.nums li:first-child{border-inline-start:0}
+.nums .v{display:block;font-family:var(--f-display);font-weight:700;font-size:clamp(46px,6.2vw,80px);line-height:1.1;color:var(--gold-hi);direction:ltr;font-variant-numeric:tabular-nums}
+.nums .l{display:block;margin-block-start:8px;color:var(--stone);font-size:17px}
+@media(max-width:760px){.nums ul{grid-template-columns:1fr 1fr;gap:30px 0}.nums li:nth-child(odd){border-inline-start:0}}
+
+/* values */
+.values{background:var(--coal);border-block:1px solid var(--line)}
+.vals{display:flex;flex-wrap:wrap;gap:14px 12px;margin:28px 0 0;padding:0}
+.vals li{list-style:none;font-family:var(--f-display);font-size:20px;padding:8px 22px;border:1px solid var(--gold);border-radius:3px;color:var(--gold-hi)}
+.goal{margin-block-start:36px;max-width:44em;color:var(--stone-dim)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.eng{border-block:1px solid var(--line);padding-block:24px;display:grid;gap:14px}
+.eng b{display:block;font-family:var(--f-display);font-size:26px;font-weight:600}
+.eng .role{color:var(--stone-dim);font-size:15px}
+.num{direction:ltr;unicode-bidi:isolate;display:inline-block;font-size:30px;letter-spacing:.05em;color:var(--gold-hi);user-select:all}
+.eng .acts{display:flex;flex-wrap:wrap;gap:10px}
+.meta{margin-block-start:24px;display:grid;gap:8px;color:var(--stone-dim)}
+.meta a{color:var(--gold-hi)}
+form{display:grid;gap:16px;background:var(--coal);border:1px solid var(--line);border-radius:6px;padding:28px}
+form h3{font-size:22px}
+label{display:grid;gap:6px;font-size:15px;color:var(--stone-dim)}
+input,select,textarea{font:400 16px/1.5 var(--f-body);color:var(--stone);background:var(--ink);border:1px solid var(--line);border-radius:3px;padding:11px 14px;width:100%}
+input::placeholder,textarea::placeholder{color:#7d7566}
+textarea{min-height:92px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:860px){.contact{grid-template-columns:1fr;gap:40px}}
+@media(max-width:520px){.row2{grid-template-columns:1fr}form{padding:20px}}
+.note{font-size:13px;color:var(--stone-dim)}
+
+footer{padding-block:36px calc(96px + env(safe-area-inset-bottom,0px));border-block-start:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;color:var(--stone-dim);font-size:15px}
+footer .brand img{width:44px;height:44px}
+.float{position:fixed;z-index:40;inset-block-end:calc(16px + env(safe-area-inset-bottom,0px));inset-inline-start:max(16px,env(safe-area-inset-left,0px));box-shadow:0 8px 28px rgba(0,0,0,.55)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero>img{animation:none}.tile img{transition:none}}
+</style>
+<style>[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<div dir="rtl" lang="ar">
+
+<div class="hero" id="top">
+  <img src="img/villa-sunset.jpg" alt="واجهة فيلا مكسوة بالحجر الطبيعي بعد التشطيب" width="1280" height="960">
+  <header class="wrap top">
+    <a class="brand" href="#top">
+      <img src="img/logo.png" alt="شعار غابة رغدان" width="54" height="54">
+      <span><b>غابة رغدان</b><small>للحجر الطبيعي · المدينة المنورة</small></span>
+    </a>
+    <nav class="nav" aria-label="أقسام الموقع">
+      <a href="#about">من نحن</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#projects">مشاريعنا</a>
+      <a href="#work">أعمالنا</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+  </header>
+  <div class="wrap hero-body">
+    <div>
+      <span class="eyebrow">غابة رغدان للحجر الطبيعي</span>
+      <h1>واجهتك من <em>الحجر الأردني الطبيعي</em> في المدينة المنورة</h1>
+      <p class="lead">تصاميم وتوريد وتركيب وإشراف. نعمل بجميع أنواع الحجر الأردني الطبيعي على واجهات الفلل والعمارات والمباني التجارية.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="https://wa.me/966508181066?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D8%AA%D8%B1%D9%83%D9%8A%D8%A8%20%D8%A7%D9%84%D8%AD%D8%AC%D8%B1%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A" target="_blank" rel="noopener">اطلب عرض سعر عبر واتساب</a>
+        <a class="btn btn-line" href="#projects">شاهد مشاريعنا</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+<div class="facts">
+  <div class="wrap">
+    <p><strong>منذ 1427 هـ</strong>انطلاقة المؤسسة الأولى</p>
+    <p><strong>المدينة المنورة</strong>مشاريع في جميع الأحياء</p>
+    <p><strong>تصميم · توريد · تركيب</strong>بإشراف هندسي</p>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <img class="emblem" src="img/logo.png" alt="شعار غابة رغدان للحجر الطبيعي" width="320" height="320">
+    <div>
+      <div class="sec-head" style="margin-block-end:20px">
+        <span class="eyebrow">من نحن</span>
+        <h2>مؤسسة وطنية بسياسات مدروسة منذ انطلاقتها</h2>
+      </div>
+      <p>تعتبر مؤسسة غابة رغدان من المؤسسات الوطنية المميزة التي اتبعت سياسات مدروسة منذ انطلاقة المؤسسة الأولى عام 1427 هـ، وارتكزت على أسس علمية وحلول واقعية مدروسة.</p>
+      <p>ويعكس حجم المشاريع التي تم إنجازها من تركيب الحجر الأردني بجميع أحياء المدينة المنورة خلال السنوات الماضية هذا النهج.</p>
+      <blockquote class="quote">التخطيط الناجح والتنفيذ الدقيق والأداء المبتكر للتصاميم والجودة العالية والمصداقية الكبيرة، هي معايير عملنا.<cite>رؤية المؤسسة</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">خدماتنا</span>
+      <h2>خدمات متكاملة للحجر الطبيعي من الفكرة إلى التسليم</h2>
+    </div>
+    <ul class="svc">
+      <li><h3>تصاميم الواجهات</h3><p>تصميم الواجهة والديكورات الخارجية والداخلية والأعمدة والشبابيك بالحجر الطبيعي.</p></li>
+      <li><h3>توريد الحجر</h3><p>توريد جميع أنواع الحجر الأردني الطبيعي والرخام.</p></li>
+      <li><h3>التركيب</h3><p>تركيب الحجر على الواجهات الخارجية للفلل والعمارات والمباني التجارية.</p></li>
+      <li><h3>الإشراف على التنفيذ</h3><p>يتابع المهندس حسام التنفيذ في الموقع لضمان جودة التركيب.</p></li>
+      <li><h3>نحت الحجر</h3><p>نحت وتشكيل الحجر لتفاصيل الواجهة.</p></li>
+      <li><h3>تطعيمات الرخام</h3><p>تركيب تطعيمات الرخام مع الحجر لإبراز تفاصيل الواجهة.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section id="stones">
+  <div class="wrap stone-sec">
+    <div class="sec-head" style="margin-block-end:0">
+      <span class="eyebrow">أنواع الحجر</span>
+      <h2>الحجر الذي نركّبه على واجهاتكم</h2>
+      <p>نشتغل حسب طلب العميل وتصميم الواجهة، ولدينا كل أنواع الحجر الطبيعي والرخام.</p>
+    </div>
+    <div>
+      <ul class="ledger">
+        <li>حجر رويشد أردني<span>حجر أردني طبيعي</span></li>
+        <li>حجر مجلي مشوه<span>حجر أردني طبيعي</span></li>
+        <li>حجر مجلي تلحسان سكري<span>حجر أردني طبيعي</span></li>
+        <li>رخام أسود<span>للأساس والتطعيمات</span></li>
+        <li>رخام هندي أسود<span>للأساس</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">مشاريعنا</span>
+      <h2>مشاريع نفخر بها</h2>
+      <p>مشاريع بأسمائها وصورها من الموقع. اضغط على أي صورة لتكبيرها.</p>
+    </div>
+    <div class="projs">
+    <article class="proj">
+      <div class="stage">
+        <button class="main" type="button" aria-label="تكبير الصورة"><img src="img/villa-sunset.jpg" alt="الفيلا بعد التشطيب وقت الغروب" width="1280" height="853"></button>
+        <ul class="thumbs">
+          <li><button class="th" type="button" aria-pressed="true" data-src="img/villa-sunset.jpg" data-alt="الفيلا بعد التشطيب وقت الغروب" aria-label="الفيلا بعد التشطيب وقت الغروب"><img src="img/villa-sunset.jpg" alt="" width="320" height="213"></button></li>
+          <li><button class="th" type="button" aria-pressed="false" data-src="img/working.jpg" data-alt="تركيب الحجر على الواجهة أثناء التنفيذ" aria-label="تركيب الحجر على الواجهة أثناء التنفيذ"><img src="img/working.jpg" alt="" width="320" height="213"></button></li>
+          <li><button class="th" type="button" aria-pressed="false" data-src="img/night.jpg" data-alt="العمل على الواجهة ليلاً" aria-label="العمل على الواجهة ليلاً"><img src="img/night.jpg" alt="" width="320" height="213"></button></li>
+          <li><button class="th" type="button" aria-pressed="false" data-src="img/villa-arch.jpg" data-alt="المدخل المقوس بعد التشطيب" aria-label="المدخل المقوس بعد التشطيب"><img src="img/villa-arch.jpg" alt="" width="320" height="213"></button></li>
+          <li><button class="th" type="button" aria-pressed="false" data-src="img/column-detail.jpg" data-alt="العمود الحجري عند المدخل" aria-label="العمود الحجري عند المدخل"><img src="img/column-detail.jpg" alt="" width="320" height="213"></button></li>
+        </ul>
+      </div>
+      <div class="info">
+        <span class="badge">تم التسليم</span>
+        <h3>فلل أرجاء الحجاز</h3>
+        <p class="sub">فيلتان بنفس التصميم</p>
+        <dl class="spec">
+          <div><dt>العميل</dt><dd>شركة أرجاء الحجاز</dd></div>
+          <div><dt>نوع المشروع</dt><dd>فلل سكنية</dd></div>
+          <div><dt>الأعمال</dt><dd>تركيب الحجر الطبيعي على الواجهات والأعمدة والمدخل المقوس</dd></div>
+          <div><dt>الصور</dt><dd>من أول التركيب حتى التشطيب</dd></div>
+        </dl>
+      </div>
+    </article>
+    <article class="proj rev">
+      <div class="stage">
+        <button class="main" type="button" aria-label="تكبير الصورة"><img src="img/villa-lawn.jpg" alt="فيلا بيضاء بحديقة أمامية" width="1280" height="853"></button>
+        <ul class="thumbs">
+          <li><button class="th" type="button" aria-pressed="true" data-src="img/villa-lawn.jpg" data-alt="فيلا بيضاء بحديقة أمامية" aria-label="فيلا بيضاء بحديقة أمامية"><img src="img/villa-lawn.jpg" alt="" width="320" height="213"></button></li>
+          <li><button class="th" type="button" aria-pressed="false" data-src="img/sheikh-2.jpg" data-alt="أعمدة وقناطر حجرية عند المدخل" aria-label="أعمدة وقناطر حجرية عند المدخل"><img src="img/sheikh-2.jpg" alt="" width="320" height="213"></button></li>
+          <li><button class="th" type="button" aria-pressed="false" data-src="img/sheikh-3.jpg" data-alt="عمود حجري بشرفة" aria-label="عمود حجري بشرفة"><img src="img/sheikh-3.jpg" alt="" width="320" height="213"></button></li>
+          <li><button class="th" type="button" aria-pressed="false" data-src="img/sheikh-4.jpg" data-alt="الفيلا من الشارع" aria-label="الفيلا من الشارع"><img src="img/sheikh-4.jpg" alt="" width="320" height="213"></button></li>
+        </ul>
+      </div>
+      <div class="info">
+        <span class="badge">أعمال منفذة</span>
+        <h3>مشروع الشيخ محمد عبدالعزيز الأحمدي</h3>
+        <p class="sub">السلام</p>
+        <dl class="spec">
+          <div><dt>العميل</dt><dd>الشيخ محمد عبدالعزيز الأحمدي</dd></div>
+          <div><dt>نوع المشروع</dt><dd>فلل ومنزل سكني</dd></div>
+          <div><dt>الأعمال</dt><dd>واجهات بالحجر الأبيض بأعمدة وقناطر وشرفات</dd></div>
+        </dl>
+      </div>
+    </article>
+    <article class="proj">
+      <div class="stage">
+        <button class="main" type="button" aria-label="تكبير الصورة"><img src="img/dari-1.jpg" alt="عمارتان بكسوة حجرية رمادية وإطارات بيضاء" width="1280" height="853"></button>
+        <ul class="thumbs">
+          <li><button class="th" type="button" aria-pressed="true" data-src="img/dari-1.jpg" data-alt="عمارتان بكسوة حجرية رمادية وإطارات بيضاء" aria-label="عمارتان بكسوة حجرية رمادية وإطارات بيضاء"><img src="img/dari-1.jpg" alt="" width="320" height="213"></button></li>
+          <li><button class="th" type="button" aria-pressed="false" data-src="img/dari-2.jpg" data-alt="المبنيان عند الغروب" aria-label="المبنيان عند الغروب"><img src="img/dari-2.jpg" alt="" width="320" height="213"></button></li>
+          <li><button class="th" type="button" aria-pressed="false" data-src="img/dari-3.jpg" data-alt="صف من العمارات السكنية" aria-label="صف من العمارات السكنية"><img src="img/dari-3.jpg" alt="" width="320" height="213"></button></li>
+          <li><button class="th" type="button" aria-pressed="false" data-src="img/dari-4.jpg" data-alt="مبنى بكسوة حجرية أثناء التنفيذ" aria-label="مبنى بكسوة حجرية أثناء التنفيذ"><img src="img/dari-4.jpg" alt="" width="320" height="213"></button></li>
+        </ul>
+      </div>
+      <div class="info">
+        <span class="badge">مراحل التنفيذ</span>
+        <h3>مشاريع داري للتطوير العقاري</h3>
+        <p class="sub">عمارات ومجمعات سكنية</p>
+        <dl class="spec">
+          <div><dt>العميل</dt><dd>شركة داري للتطوير العقاري، أ. رائد الأحمدي</dd></div>
+          <div><dt>نوع المشروع</dt><dd>عمارات سكنية</dd></div>
+          <div><dt>الأعمال</dt><dd>كسوة الواجهات بالحجر الطبيعي مع إطارات بيضاء</dd></div>
+        </dl>
+      </div>
+    </article>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">أعمالنا</span>
+      <h2>من أعمالنا الأخرى</h2>
+      <p>واجهات سكنية وتجارية نفذناها في المدينة المنورة. وتجد المزيد على صفحتنا في انستجرام.</p>
+    </div>
+    <div class="bento">
+      <button class="tile tall" type="button"><img src="img/building-white.jpg" alt="مبنى حديث مكسو بالحجر الأبيض" width="619" height="1100"><span>مبنى سكني حديث</span></button>
+      <button class="tile wide" type="button"><img src="img/commercial-1.jpg" alt="مبنى تجاري بالحجر الأبيض والزجاج" width="1200" height="900"><span>مبنى تجاري بواجهة زجاجية</span></button>
+      <button class="tile" type="button"><img src="img/building-street.jpg" alt="عمارة سكنية على شارع رئيسي" width="1200" height="675"><span>عمارة على شارع رئيسي</span></button>
+      <button class="tile tall" type="button"><img src="img/before-after.jpg" alt="صورة قبل وبعد تركيب الحجر الطبيعي على واجهة" width="799" height="1200"><span>قبل وبعد التركيب</span></button>
+      <button class="tile" type="button"><img src="img/house-courtyard.jpg" alt="بيت بفناء داخلي وواجهة حجرية" width="1200" height="900"><span>بيت بفناء داخلي</span></button>
+      <button class="tile" type="button"><img src="img/commercial-2.jpg" alt="مبنى تجاري بواجهة زجاجية وحجر أبيض" width="1200" height="900"><span>واجهة تجارية</span></button>
+      <button class="tile wide" type="button"><img src="img/apartments.jpg" alt="عمارة من أربعة أدوار بالحجر الطبيعي" width="1200" height="675"><span>عمارة من أربعة أدوار</span></button>
+      <button class="tile" type="button"><img src="img/banded-facade.jpg" alt="واجهة حجرية بخطوط أفقية ومدخل مزخرف" width="1200" height="800"><span>واجهة بخطوط حجرية</span></button>
+    </div>
+  </div>
+</section>
+
+<section id="numbers" class="nums">
+  <img src="img/night.jpg" alt="" width="1280" height="960">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">أرقامنا</span>
+      <h2>أرقام تعكس حجم عملنا</h2>
+    </div>
+    <ul>
+      <li><span class="v">+<b class="n" data-to="50">50</b></span><span class="l">شركاء النجاح</span></li>
+      <li><span class="v">+<b class="n" data-to="19">19</b></span><span class="l">سنة من الخبرة</span></li>
+      <li><span class="v"><b class="n" data-to="500">500</b></span><span class="l">مشروع منفذ</span></li>
+      <li><span class="v"><b class="n" data-to="5">5</b></span><span class="l">مشروع تحت الإنشاء</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="values" class="values">
+  <div class="wrap">
+    <div class="sec-head" style="margin-block-end:0">
+      <span class="eyebrow">قيمنا</span>
+      <h2>رضا عملائنا أولى اهتماماتنا</h2>
+    </div>
+    <ul class="vals">
+      <li>الجودة الفائقة الاحترافية</li>
+      <li>المصداقية والأمانة</li>
+      <li>الشفافية والوضوح</li>
+      <li>الابتكار والإبداع</li>
+      <li>سرعة الأداء والتنفيذ</li>
+    </ul>
+    <p class="goal">نلتزم بأعلى مستويات الجودة في كل عملية من نشاطات المؤسسة، من إشراف أو تصاميم أو تركيب أو نحت.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div>
+      <div class="sec-head" style="margin-block-end:24px">
+        <span class="eyebrow">تواصل معنا</span>
+        <h2>ابدأ بعرض سعر لواجهتك</h2>
+        <p>تواصل مع المهندس حسام مباشرة أو أرسل تفاصيل مشروعك.</p>
+      </div>
+      <div class="eng">
+        <div><b>المهندس حسام</b><span class="role">الإشراف والتواصل وعروض الأسعار</span></div>
+        <span class="num" id="phone">0508181066</span>
+        <div class="acts">
+          <a class="btn btn-gold" href="https://wa.me/966508181066" target="_blank" rel="noopener">واتساب</a>
+          <button class="btn btn-line" type="button" id="copy">نسخ الرقم</button>
+        </div>
+      </div>
+      <div class="meta">
+        <p>المدينة المنورة، المملكة العربية السعودية</p>
+        <p>انستجرام: <a href="https://www.instagram.com/alhagr_ragdan/" target="_blank" rel="noopener" dir="ltr">@alhagr_ragdan</a></p>
+      </div>
+    </div>
+
+    <form id="quote" onsubmit="return false">
+      <h3>اطلب عرض سعر</h3>
+      <div class="row2">
+        <label for="f-name">الاسم<input id="f-name" type="text" placeholder="اسمك الكريم" autocomplete="name"></label>
+        <label for="f-type">نوع المبنى
+          <select id="f-type">
+            <option>فيلا</option><option>عمارة سكنية</option><option>مبنى تجاري</option><option>مدخل أو سور</option><option>أخرى</option>
+          </select>
+        </label>
+      </div>
+      <label for="f-area">المساحة التقريبية للواجهة (م²)<input id="f-area" type="text" inputmode="numeric" placeholder="مثال: 250"></label>
+      <label for="f-note">ملاحظات<textarea id="f-note" placeholder="نوع الحجر المطلوب، الحي، أو أي تفاصيل أخرى"></textarea></label>
+      <a class="btn btn-gold" id="send" href="#" target="_blank" rel="noopener">أرسل الطلب عبر واتساب</a>
+      <p class="note">يفتح الطلب في واتساب برسالة جاهزة، ثم تضغط إرسال.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/logo.png" alt="" width="44" height="44"><span><b>غابة رغدان للحجر الطبيعي</b><small>المدينة المنورة · منذ 1427 هـ</small></span></a>
+    <a href="https://www.instagram.com/alhagr_ragdan/" target="_blank" rel="noopener" dir="ltr">instagram.com/alhagr_ragdan</a>
+  </div>
+</footer>
+
+<a class="btn btn-gold float" href="https://wa.me/966508181066" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">واتساب</a>
+
+<div class="lb" id="lb" hidden role="dialog" aria-label="عرض الصورة">
+  <button type="button" id="lb-x">إغلاق</button>
+  <img id="lb-img" alt="">
+  <p id="lb-cap"></p>
+</div>
+</div>
+
+<script>
+(function(){
+  var lb=document.getElementById('lb'),li=document.getElementById('lb-img'),lc=document.getElementById('lb-cap'),lx=document.getElementById('lb-x'),opener=null;
+  function openLb(src,alt,cap,from){opener=from;li.src=src;li.alt=alt||'';lc.textContent=cap||'';lb.hidden=false;lx.focus()}
+  function close(){lb.hidden=true;li.removeAttribute('src');if(opener)opener.focus()}
+  [].forEach.call(document.querySelectorAll('.tile'),function(t){t.addEventListener('click',function(){
+    var im=t.querySelector('img');openLb(im.src,im.alt,t.querySelector('span').textContent,t);
+  })});
+  [].forEach.call(document.querySelectorAll('.proj'),function(p){
+    var main=p.querySelector('.main'),mi=main.querySelector('img'),name=p.querySelector('h3').textContent;
+    var th=[].slice.call(p.querySelectorAll('.th'));
+    th.forEach(function(b){b.addEventListener('click',function(){
+      mi.src=b.getAttribute('data-src');mi.alt=b.getAttribute('data-alt');
+      th.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    })});
+    main.addEventListener('click',function(){openLb(mi.src,mi.alt,name+' · '+mi.alt,main)});
+  });
+  lx.addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close()});
+
+  var nums=[].slice.call(document.querySelectorAll('.n'));
+  function run(el){
+    var to=+el.getAttribute('data-to'),t0=null,dur=1800;
+    function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(to*e);if(p<1)requestAnimationFrame(step)}
+    el.textContent='0';requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){run(en.target);io.unobserve(en.target)}})},{threshold:.6});
+    nums.forEach(function(n){io.observe(n)});
+  }
+
+  var cp=document.getElementById('copy'),ph=document.getElementById('phone');
+  cp.addEventListener('click',function(){
+    function sel(){var r=document.createRange();r.selectNodeContents(ph);var s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent='حدّد الرقم وانسخه'}
+    try{navigator.clipboard.writeText(ph.textContent).then(function(){cp.textContent='تم النسخ'},sel)}catch(e){sel()}
+  });
+
+  var ids=['f-name','f-type','f-area','f-note'].map(function(i){return document.getElementById(i)});
+  var send=document.getElementById('send');
+  function build(){
+    var name=ids[0].value.trim(),type=ids[1].value,area=ids[2].value.trim(),note=ids[3].value.trim();
+    var t='السلام عليكم، أرغب بعرض سعر لتركيب الحجر الطبيعي.\n';
+    if(name)t+='الاسم: '+name+'\n';
+    t+='نوع المبنى: '+type+'\n';
+    if(area)t+='المساحة التقريبية للواجهة: '+area+' م²\n';
+    if(note)t+='ملاحظات: '+note+'\n';
+    send.href='https://wa.me/966508181066?text='+encodeURIComponent(t.trim());
+  }
+  ids.forEach(function(el){el.addEventListener('input',build);el.addEventListener('change',build)});
+  build();
+})();
+</script>
+
+</body>
+</html>
